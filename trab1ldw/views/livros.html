@@ -10,4 +10,10 @@
         <p>{{v}}</p>
     </details>
     {% endfor %}
+    <form action="{{url_for('livros')}}" method="POST">
+        <label>Jogo:</label>
+        <input type="text" name="jogo">
+        <input type="submit" value="Cadastrar">
+    </form> 
+    
 {% endblock content %}
