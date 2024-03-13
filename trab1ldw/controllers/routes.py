@@ -3,6 +3,8 @@ from flask import render_template, request
 jogadores = []
 jogos = []
 cursosList = [{'nome' : 'google cloud', 'horas' : 20, 'professor' : 'Deus'}]
+gamelist = [{'Título' : 'Harry'}]
+
 
 def init_app(app):
     @app.route('/')
@@ -17,8 +19,8 @@ def init_app(app):
         return render_template('perfil.html',cursosList=cursosList)
     
 
-    @app.route('/games', methods=['GET', 'POST'])
-    def games():
+    @app.route('/livros', methods=['GET', 'POST'])
+    def livros():
         game = gamelist[0]
         
         if request.method == 'POST':
@@ -28,8 +30,8 @@ def init_app(app):
             if request.form.get('jogo'):
                 jogos.append(request.form.get('jogo'))
                 
-        return render_template('games.html', game=game, jogadores=jogadores, jogos=jogos)
-    
+        return render_template('livros.html',game=game, jogadores=jogadores, jogos=jogos
+)
     
 
   

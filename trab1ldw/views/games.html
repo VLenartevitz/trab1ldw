@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Esta é a página de games!</h1>
+    <h1>Esta é a página de Livros</h1>
     <hr>
-    <p><strong>Game mais jogado no momento:</strong></p>
-    {# Comentário no Jinja2 #}
 
     {% for k, v in game.items() %}
     <details>
@@ -13,9 +11,7 @@
     </details>
     {% endfor %}
 
-    <p>O jogo {{game['Título']}} tem {{2024-game['Ano']}} anos.</p>
     <p>Está sendo jogado por:</p>
-    <!-- <p>{{jogadores}}</p> -->
     <ol>
         {% for jogador in jogadores %}
         <li>{{jogador}}</li>
@@ -42,5 +38,6 @@
         <label>Jogo:</label>
         <input type="text" name="jogo">
         <input type="submit" value="Cadastrar">
-    </form>
+    </form> 
+    
 {% endblock content %}

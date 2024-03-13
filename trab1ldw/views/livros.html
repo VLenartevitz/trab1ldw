@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Cadastro para futuros livros a serem lidos:</h1> 
+    <hr>
+
+    <h2>Livros Cadastrados</h2>
+    {% for k, v in game.items() %}
+    <details>
+        <summary>{{k}}</summary>
+        <p>{{v}}</p>
+    </details>
+    {% endfor %}
+{% endblock content %}
