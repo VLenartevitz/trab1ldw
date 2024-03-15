@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Cadastro para futuros livros a serem lidos:</h1> 
+    <h1 style="text-align: center;">Cadastro para futuros livros a serem lidos:</h1> 
     <hr>
 
-    <h2>Livros Cadastrados</h2>
+    <h2 style="text-align: center;">Livros Cadastrados</h2>
     
     <hr>
-    <ol>
-        {% for jogo in jogos %}
-        <li>{{jogo}}</li>
+    <ol style="text-align: center;">
+        {% for livro in books %}
+        <li style="text-align: center;">{{livro}}</li>
         {% endfor %}
     </ol>
 
-    <form action="{{url_for('livros')}}" method="POST">
-        <label>Digite->></label>
-        <input type="text" name="jogo">
-        <input type="submit" value="Cadastrar">
+    <form action="{{url_for('livros')}}" method="POST" style="text-align: center;">
+        <label style="text-align: center;">Digite->></label>
+        <input type="text" name="livro" style="text-align: center;">
+        <input type="submit" value="Cadastrar" style="text-align: center;">
     </form>
 {% endblock content %}

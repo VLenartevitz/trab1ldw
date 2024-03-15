@@ -1,7 +1,7 @@
 from flask import render_template, request
 
 jogadores = []
-jogos = []
+books = []
 cursosList = [{'nome' : 'google cloud', 'horas' : 20, 'professor' : 'Deus'}]
 livroslist = [{'Livros' : 'Harry'}]
 
@@ -23,10 +23,10 @@ def init_app(app):
     def livros():
         livro = livroslist[0]
       
-        if request.form.get('jogo'):
-            jogos.append(request.form.get('jogo'))
+        if request.form.get('livro'):
+            books.append(request.form.get('livro'))
                 
-        return render_template('livros.html',livro=livro, jogadores=jogadores, jogos=jogos
+        return render_template('livros.html',livro=livro, jogadores=jogadores, books=books
 )
     
 
